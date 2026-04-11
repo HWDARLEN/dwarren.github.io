@@ -112,8 +112,17 @@
   border-radius: 6px;
 }
 
-.show {
+
+
+    section {
+  display: none;
+}
+
+section.active {
   display: block;
+}
+
+
 }
 
 
@@ -123,11 +132,11 @@
 <button class="menu-button" onclick="toggleMenu()">☰</button>
 
 <nav id="menu" class="menu">
-  <a href="#about" onclick="closeMenu()">About</a>
-  <a href="#skills" onclick="closeMenu()">Skills</a>
-  <a href="#projects" onclick="closeMenu()">Projects</a>
-  <a href="#resume" onclick="closeMenu()">Resume</a>
-  <a href="#contact" onclick="closeMenu()">Contact</a>
+<a href="#" onclick="showSection('about')">About</a>
+<a href="#" onclick="showSection('skills')">Skills</a>
+<a href="#" onclick="showSection('projects')">Projects</a>
+<a href="#" onclick="showSection('resume')">Resume</a>
+<a href="#" onclick="showSection('contact')">Contact</a>
 </nav>
 
 <header>
@@ -135,7 +144,7 @@
   <p>IT Support | Cybersecurity | Network Operations</p>
 </header>
 
-<section id="about">
+<section id="about" class="active">
   <h2>About Me</h2>
   <p>
     I am an IT and cybersecurity-focused professional with hands-on experience in security operations,
@@ -218,6 +227,20 @@
   function closeMenu() {
     document.getElementById("menu").classList.remove("show");
   }
+
+  function showSection(sectionId) {
+    const sections = document.querySelectorAll("section");
+
+    sections.forEach(section => {
+      section.classList.remove("active");
+    });
+
+    document.getElementById(sectionId).classList.add("active");
+
+    closeMenu();
+  }
 </script>
 </body>
 </html>
+
+  
