@@ -31,7 +31,7 @@
     }
 
     section {
-      max-width: 900px;
+      max-width: 950px;
       margin: 20px auto;
       background: white;
       padding: 25px;
@@ -72,7 +72,7 @@
     .project,
     .accolade-card {
       background-color: #f9f9f9;
-      padding: 15px;
+      padding: 18px;
       margin-bottom: 20px;
       border-radius: 8px;
     }
@@ -145,6 +145,12 @@
       margin-bottom: 10px;
     }
 
+    .project-subtitle {
+      font-weight: bold;
+      margin-top: 10px;
+      color: #0f172a;
+    }
+
     @media (max-width: 600px) {
       .menu-button {
         top: 10px;
@@ -190,19 +196,19 @@
     <h2>About Me</h2>
     <p>
       I am an IT and cybersecurity-focused professional with hands-on experience in security operations,
-      incident monitoring, access control systems, technical support tools, and project-based hardware work.
-      I am CompTIA Security+ certified and currently building my career in IT, cybersecurity, and networking.
+      incident monitoring, access control systems, technical support tools, networking concepts, and
+      project-based hardware work. I am CompTIA Security+ certified and currently building my career in
+      IT, cybersecurity, networking, and systems support.
     </p>
   </section>
 
   <section id="skills">
     <h2>Skills</h2>
     <ul>
-      <li><strong>IT & Networking:</strong> Network Troubleshooting, TCP/IP, Connectivity Testing, System Monitoring</li>
-      <li><strong>Cybersecurity:</strong> Security+ Knowledge, Incident Monitoring, Threat Awareness, Access Control Systems</li>
-      <li><strong>Tools & Technologies:</strong> Slack Workflow Builder, Airtable, SIM Ticketing System, Lenel, Optics, GitHub, Microsoft Office Suite, Linux, 
-        Azure Lab, Visual Studio Android Studio</li>
-      <li><strong>Programming & Hardware:</strong> Arduino IDE, ESP32, C++, C#, Java, Python, Kotlin Breadboarding, LED Integration, Sensor-Based Systems</li>
+      <li><strong>IT & Networking:</strong> Network Troubleshooting, TCP/IP, Connectivity Testing, System Monitoring, Network Diagnostics</li>
+      <li><strong>Cybersecurity:</strong> Security+ Knowledge, Incident Monitoring, Threat Awareness, Access Control Systems, Risk Awareness</li>
+      <li><strong>Tools & Technologies:</strong> Slack Workflow Builder, Airtable, SIM Ticketing System, Lenel, Optics, GitHub, Microsoft Office Suite, Excel</li>
+      <li><strong>Programming & Hardware:</strong> Arduino IDE, ESP32, Breadboarding, LEDs, Buzzers, Sensors, LCD Displays, Push Buttons</li>
       <li><strong>Technical Skills:</strong> Technical Documentation, Incident Reporting, Data Tracking, Problem Solving, Communication</li>
     </ul>
   </section>
@@ -212,19 +218,42 @@
 
     <div class="project">
       <h3>Pedestrian Walk Signal and Red Light Simulation</h3>
-      <p><strong>Tools:</strong> Arduino IDE, ESP32, C++, LEDs, Push Button, Buzzer, LCD Display</p>
+      <p><strong>Tools Used:</strong> ESP32, Breadboard, Jumper Wires, LEDs, Push Button, Buzzer, LCD Display, Arduino IDE</p>
+
       <p>
-        Developed an embedded traffic signal simulation that controlled red, yellow, and green light behavior
-        while also advising pedestrians when it was safe to walk. Implemented timing logic and signal sequencing
-        using an ESP32 microcontroller and integrated hardware components to simulate real-world pedestrian and traffic flow.
+        This project focused on designing an IoT-enabled traffic light controller that simulated a two-way traffic
+        system with pedestrian crossing functionality. I used LEDs to represent standard traffic behavior, including
+        green for go, yellow for slow down, and red for stop. Once the red light was active, the system signaled
+        that pedestrians could safely walk.
       </p>
+
+      <p>
+        The project required implementing timing logic to control how long each traffic state remained active and
+        ensuring the system returned to its default cycle after pedestrian activity. A push button was used to simulate
+        the pedestrian crossing trigger, while the overall design reflected how real intersections coordinate vehicle
+        and pedestrian movement safely.
+      </p>
+
+      <p>
+        This project strengthened my understanding of IoT concepts by combining hardware components with software logic.
+        It also helped build experience in Arduino programming, simulation-based design, debugging, and testing a smart
+        traffic control system.
+      </p>
+
+      <p class="project-subtitle">What I learned:</p>
+      <ul>
+        <li>How to connect physical components with smart system logic</li>
+        <li>How to program timing sequences for multiple traffic states</li>
+        <li>How to integrate pedestrian crossing behavior into a controller design</li>
+        <li>How to test and troubleshoot embedded system logic</li>
+      </ul>
 
       <h4>Project Images</h4>
       <div class="project-images">
-        <img src="images/pedestrian1.jpeg" alt="Pedestrian project image 1" />
-        <img src="images/pedestrian2.jpeg" alt="Pedestrian project image 2" />
-        <img src="images/pedestrian3.jpeg" alt="Pedestrian project image 3" />
-        <img src="images/pedestrian4.jpeg" alt="Pedestrian project image 4" />
+        <img src="images/pedestrian1.jpeg" alt="Pedestrian and traffic light simulation image 1" />
+        <img src="images/pedestrian2.jpeg" alt="Pedestrian and traffic light simulation image 2" />
+        <img src="images/pedestrian3.jpeg" alt="Pedestrian and traffic light simulation image 3" />
+        <img src="images/pedestrian4.jpeg" alt="Pedestrian and traffic light simulation image 4" />
       </div>
 
       <h4>Project Demo Video</h4>
@@ -235,43 +264,75 @@
     </div>
 
     <div class="project">
-      <h3>Intruder Alarm Sensor Project</h3>
-      <p><strong>Tools:</strong> Arduino IDE, ESP32, PIR Motion Sensor, Buzzer, LEDs, C++</p>
+      <h3>IoT Smart Home Automation and Security System</h3>
+      <p><strong>Tools Used:</strong> ESP32 or Arduino, Breadboard, Jumper Wires, LEDs, Buzzer, Ultrasonic Sensor, Photocell (LDR), IR Sensor, DHT11, Arduino IDE, Excel</p>
+
       <p>
-        Built a sensor-based alarm system designed to detect possible intruder movement and trigger an alarm response.
-        Integrated motion sensing hardware with an ESP32 microcontroller so the system could identify activity and activate
-        visual and audio alerts. Tested and adjusted the setup to improve detection accuracy and system responsiveness.
+        This project involved building a smart home automation and security prototype that used multiple sensors to
+        monitor environmental and security-related conditions. The system was designed to simulate how connected home
+        technology can automate responses and improve safety inside a home environment.
       </p>
+
+      <p>
+        Different sensors supported different system actions. An ultrasonic sensor was used to monitor proximity for
+        possible intruder activity. A photocell helped trigger lighting behavior based on darkness levels. An IR sensor
+        acted like a door status sensor, while the DHT11 measured temperature and humidity for environmental monitoring.
+      </p>
+
+      <p>
+        LEDs were used to show different system states, such as normal, caution, and danger. A buzzer supported alarm
+        behavior when the system detected an abnormal or unsafe condition. This project required integrating multiple
+        inputs, organizing logic for different system responses, and understanding how smart systems collect and act
+        on sensor data.
+      </p>
+
+      <p class="project-subtitle">What I learned:</p>
+      <ul>
+        <li>How sensor-based automation works in IoT environments</li>
+        <li>How to connect multiple sensors to a microcontroller</li>
+        <li>How to use LEDs and alarms to communicate system status</li>
+        <li>How to collect, interpret, and respond to hardware data</li>
+      </ul>
 
       <h4>Project Images</h4>
       <div class="project-images">
-        <img src="images/intruder1.jpeg" alt="Intruder project image 1" />
-        <img src="images/intruder2.jpeg" alt="Intruder project image 2" />
-        <img src="images/intruder3.jpeg" alt="Intruder project image 3" />
-        <img src="images/intruder4.jpeg" alt="Intruder project image 4" />
-        <img src="images/intruder5.jpeg" alt="Intruder project image 5" />
+        <img src="images/intruder1.jpeg" alt="Intruder or smart home project image 1" />
+        <img src="images/intruder2.jpeg" alt="Intruder or smart home project image 2" />
+        <img src="images/intruder3.jpeg" alt="Intruder or smart home project image 3" />
+        <img src="images/intruder4.jpeg" alt="Intruder or smart home project image 4" />
       </div>
     </div>
 
     <div class="project">
       <h3>Network Connectivity and Troubleshooting Project</h3>
-      <p><strong>Tools:</strong> Command Prompt, TCP/IP, Ping, Tracert, Network Diagnostics</p>
+      <p><strong>Tools Used:</strong> Command Prompt, Ping, Tracert, TCP/IP Analysis, Microsoft Word, Excel</p>
+
       <p>
-        Completed a networking project focused on testing connectivity, identifying communication issues,
-        and documenting troubleshooting steps. Used networking tools and commands to analyze system communication
-        and strengthen understanding of TCP/IP fundamentals.
+        This networking project focused on analyzing connectivity, identifying communication issues, and documenting
+        troubleshooting steps. I used common network diagnostic commands to test how systems communicated across a
+        network and to identify where issues could occur.
       </p>
+
+      <p>
+        The project helped strengthen my understanding of TCP/IP fundamentals, connectivity testing, and practical
+        troubleshooting methods. It also required documenting results clearly and organizing findings into a formal report.
+      </p>
+
       <a class="button" href="docs/network-project.pdf" target="_blank">View Networking Project</a>
     </div>
 
     <div class="project">
       <h3>Slack Officer Check-In Workflow</h3>
-      <p><strong>Tools:</strong> Slack Workflow Builder, Airtable, Data Structuring</p>
+      <p><strong>Tools Used:</strong> Slack Workflow Builder, Airtable, Data Structuring, Workflow Logic</p>
+
       <p>
-        Designed and developed a workflow system to track officer check-ins using Slack automation.
-        Structured the workflow to capture operational details such as officer name, phone number,
-        vehicle information, and assigned zones. Focused on improving accountability, organization,
-        and real-time communication for operations teams.
+        Designed a workflow system to track officer check-ins using Slack automation. The workflow was structured to
+        capture operational details such as officer name, phone number, vehicle information, and assigned zones.
+      </p>
+
+      <p>
+        This project focused on process improvement, accountability, and real-time communication support for operations
+        teams. It also demonstrated how automation can improve visibility and reduce manual tracking tasks.
       </p>
     </div>
   </section>
@@ -282,8 +343,8 @@
     <div class="accolade-card">
       <h3>Associate of Applied Science in Information Technology and Networking</h3>
       <p>
-        Built foundational knowledge in networking, technical support, connectivity,
-        troubleshooting, and system operations that apply directly to IT environments.
+        Built foundational knowledge in networking, technical support, connectivity, troubleshooting,
+        and system operations that apply directly to IT environments.
       </p>
       <div class="accolade-images">
         <img src="images/associates.jpeg" alt="Associate degree image" />
@@ -363,3 +424,4 @@
   </script>
 </body>
 </html>
+
