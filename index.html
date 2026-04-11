@@ -55,38 +55,85 @@
       padding: 20px;
       color: #555;
     }
+ <head>
+  <style>
+    /* your existing CSS */
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .project {
+      background-color: #f9f9f9;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+    }
+    .menu-button {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  background: #0f172a;
+  color: white;
+  border: none;
+  font-size: 28px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.menu {
+  display: none;
+  position: fixed;
+  top: 65px;
+  right: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  padding: 10px;
+  z-index: 999;
+}
+
+.menu a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: bold;
+}
+
+.menu a:hover {
+  background: #f1f5f9;
+  border-radius: 6px;
+}
+
+.show {
+  display: block;
+}
+
+
   </style>
 </head>
-  <style>
-ul {
-  padding-left: 20px;
-}
-
-li {
-  margin-bottom: 10px;
-}
-
-.project {
-  background-color: #f9f9f9;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-}
-</style>
 <body>
+<button class="menu-button" onclick="toggleMenu()">☰</button>
+
+<nav id="menu" class="menu">
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#skills" onclick="closeMenu()">Skills</a>
+  <a href="#projects" onclick="closeMenu()">Projects</a>
+  <a href="#resume" onclick="closeMenu()">Resume</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+</nav>
 
 <header>
   <h1>Darlene Warren</h1>
   <p>IT Support | Cybersecurity | Network Operations</p>
 </header>
-
-<nav>
-  <a href="#about">About</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
-  <a href="#resume">Resume</a>
-  <a href="#contact">Contact</a>
-</nav>
 
 <section id="about">
   <h2>About Me</h2>
@@ -162,6 +209,15 @@ li {
 <footer>
   <p>© 2026 Darlene Warren</p>
 </footer>
+  
+<script>
+  function toggleMenu() {
+    document.getElementById("menu").classList.toggle("show");
+  }
 
+  function closeMenu() {
+    document.getElementById("menu").classList.remove("show");
+  }
+</script>
 </body>
 </html>
