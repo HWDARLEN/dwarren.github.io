@@ -122,7 +122,8 @@
       display: block;
     }
 
-    .project-images {
+    .project-images,
+    .accolade-images {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 10px;
@@ -130,7 +131,8 @@
       margin-bottom: 15px;
     }
 
-    .project-images img {
+    .project-images img,
+    .accolade-images img {
       width: 100%;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -218,9 +220,9 @@
 
       <h4>Project Images</h4>
       <div class="project-images">
-        <img src="images/pedestrian1.jpg" alt="Pedestrian project image 1" />
-        <img src="images/pedestrian2.jpg" alt="Pedestrian project image 2" />
-        <img src="images/pedestrian3.jpg" alt="Pedestrian project image 3" />
+        <img src="images/pedestrian1.jpeg" alt="Pedestrian walk signal project image 1" />
+        <img src="images/pedestrian2.jpeg" alt="Pedestrian walk signal project image 2" />
+        <img src="images/pedestrian3.jpeg" alt="Pedestrian walk signal project image 3" />
       </div>
 
       <h4>Project Demo Video</h4>
@@ -241,8 +243,8 @@
 
       <h4>Project Images</h4>
       <div class="project-images">
-        <img src="images/intruder1.jpg" alt="Intruder project image 1" />
-        <img src="images/intruder2.jpg" alt="Intruder project image 2" />
+        <img src="images/intruder1.jpeg" alt="Intruder alarm sensor project image 1" />
+        <img src="images/intruder2.jpeg" alt="Intruder alarm sensor project image 2" />
       </div>
     </div>
 
@@ -273,48 +275,47 @@
     <h2>Accolades</h2>
 
     <div class="accolade-card">
-      <h3>Bachelor of Science in Software Development</h3>
-      <p>
-        Developed skills in software development, coding logic, system design, technical problem solving,
-        and structured project work through coursework and hands-on assignments.
-      </p>
-      <a class="button" href="docs/bachelors-degree.pdf" target="_blank">View Degree</a>
-    </div>
-
-    <div class="accolade-card">
       <h3>Associate of Applied Science in Information Technology and Networking</h3>
       <p>
-        Built foundational knowledge in networking, technical support, connectivity, infrastructure,
-        and system troubleshooting in support-focused environments.
+        Built foundational knowledge in networking, technical support, connectivity,
+        troubleshooting, and system operations that apply directly to IT environments.
       </p>
-      <a class="button" href="docs/associates-degree.pdf" target="_blank">View Degree</a>
+      <div class="accolade-images">
+        <img src="images/associates.jpeg" alt="Associate degree image" />
+      </div>
     </div>
 
     <div class="accolade-card">
       <h3>CompTIA Security+</h3>
       <p>
-        Strengthened knowledge in cybersecurity fundamentals including threats, vulnerabilities, risk management,
-        access control, and incident response.
+        Strengthened knowledge in cybersecurity fundamentals including threats, vulnerabilities,
+        risk management, access control, and incident response.
       </p>
-      <a class="button" href="docs/securityplus.pdf" target="_blank">View Certificate</a>
+      <div class="accolade-images">
+        <img src="images/securityplus.jpeg" alt="CompTIA Security Plus certificate image" />
+      </div>
     </div>
 
     <div class="accolade-card">
       <h3>Programming Essentials</h3>
       <p>
-        Built understanding of programming logic, structure, syntax, problem solving,
-        and foundational coding principles.
+        Built foundational programming knowledge including logic, structure, syntax,
+        and technical problem solving.
       </p>
-      <a class="button" href="docs/programming-essentials.pdf" target="_blank">View Certificate</a>
+      <div class="accolade-images">
+        <img src="images/programming.jpeg" alt="Programming Essentials certificate image" />
+      </div>
     </div>
 
     <div class="accolade-card">
       <h3>Software Design and Solutions</h3>
       <p>
-        Learned system planning, design thinking, solution development,
-        and structured approaches to solving technical problems.
+        Learned system design principles, structured solution building,
+        and software planning concepts.
       </p>
-      <a class="button" href="docs/software-design-solutions.pdf" target="_blank">View Certificate</a>
+      <div class="accolade-images">
+        <img src="images/software-design.jpeg" alt="Software Design and Solutions certificate image" />
+      </div>
     </div>
   </section>
 
