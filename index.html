@@ -52,6 +52,7 @@
       text-decoration: none;
       border-radius: 6px;
       margin-top: 10px;
+      margin-right: 10px;
     }
 
     footer {
@@ -68,10 +69,11 @@
       margin-bottom: 10px;
     }
 
-    .project {
+    .project,
+    .accolade-card {
       background-color: #f9f9f9;
       padding: 15px;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       border-radius: 8px;
     }
 
@@ -99,7 +101,7 @@
       box-shadow: 0 2px 10px rgba(0,0,0,0.15);
       padding: 10px;
       z-index: 999;
-      min-width: 200px;
+      min-width: 210px;
     }
 
     .menu a {
@@ -120,7 +122,8 @@
       display: block;
     }
 
-    .project-images {
+    .project-images,
+    .accolade-images {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 10px;
@@ -128,7 +131,8 @@
       margin-bottom: 15px;
     }
 
-    .project-images img {
+    .project-images img,
+    .accolade-images img {
       width: 100%;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -138,6 +142,7 @@
       width: 100%;
       border-radius: 8px;
       margin-top: 10px;
+      margin-bottom: 10px;
     }
 
     @media (max-width: 600px) {
@@ -149,7 +154,7 @@
       .menu {
         top: 55px;
         left: 10px;
-        min-width: 170px;
+        min-width: 180px;
       }
 
       header {
@@ -171,6 +176,7 @@
     <a href="#" onclick="showSection('about')">About</a>
     <a href="#" onclick="showSection('skills')">Skills</a>
     <a href="#" onclick="showSection('projects')">Projects</a>
+    <a href="#" onclick="showSection('accolades')">Accolades</a>
     <a href="#" onclick="showSection('resume')">Resume</a>
     <a href="#" onclick="showSection('contact')">Contact</a>
   </nav>
@@ -184,8 +190,8 @@
     <h2>About Me</h2>
     <p>
       I am an IT and cybersecurity-focused professional with hands-on experience in security operations,
-      incident monitoring, access control systems, and technical support tools. I am CompTIA Security+ certified
-      and currently building my career in IT, cybersecurity, and networking.
+      incident monitoring, access control systems, technical support tools, and project-based hardware work.
+      I am CompTIA Security+ certified and currently building my career in IT, cybersecurity, and networking.
     </p>
   </section>
 
@@ -194,7 +200,8 @@
     <ul>
       <li><strong>IT & Networking:</strong> Network Troubleshooting, TCP/IP, Connectivity Testing, System Monitoring</li>
       <li><strong>Cybersecurity:</strong> Security+ Knowledge, Incident Monitoring, Threat Awareness, Access Control Systems</li>
-      <li><strong>Tools & Technologies:</strong> Slack Workflow Builder, SIM Ticketing System, Lenel, Optics, Airtable, GitHub, Microsoft Office Suite</li>
+      <li><strong>Tools & Technologies:</strong> Slack Workflow Builder, Airtable, SIM Ticketing System, Lenel, Optics, GitHub, Microsoft Office Suite</li>
+      <li><strong>Programming & Hardware:</strong> Arduino IDE, ESP32, C++, Breadboarding, LED Integration, Sensor-Based Systems</li>
       <li><strong>Technical Skills:</strong> Technical Documentation, Incident Reporting, Data Tracking, Problem Solving, Communication</li>
     </ul>
   </section>
@@ -203,51 +210,137 @@
     <h2>Projects</h2>
 
     <div class="project">
-      <h3>Slack Officer Check-In Workflow</h3>
-      <p><strong>Tools:</strong> Slack Workflow Builder, Airtable, Data Structuring</p>
+      <h3>Pedestrian Walk Signal and Traffic Light Simulation</h3>
+      <p><strong>Tools:</strong> Arduino IDE, ESP32, C++, LEDs, Push Button, Buzzer, LCD Display</p>
       <p>
-        Designed and developed a workflow system to track officer check-ins using Slack automation.
-        Implemented structured data collection to capture officer details such as name, phone number,
-        vehicle tag, and assigned zones. Improved accountability and real-time tracking by streamlining
-        communication between operations teams.
-      </p>
-    </div>
-
-    <div class="project">
-      <h3>Traffic Light Simulation Project</h3>
-      <p><strong>Tools:</strong> Arduino IDE, ESP32, C++</p>
-      <p>
-        Developed an embedded traffic control system using ESP32 and Arduino IDE.
-        Implemented state-based logic to simulate real-world traffic light sequencing.
-        Integrated LEDs for signal states and tested timing accuracy to ensure proper transitions.
+        Developed an embedded traffic signal simulation that controlled red, yellow, and green light behavior
+        while also advising pedestrians when it was safe to walk. Implemented timing logic and signal sequencing
+        using an ESP32 microcontroller and integrated hardware components to simulate real-world pedestrian and traffic flow.
       </p>
 
       <h4>Project Images</h4>
       <div class="project-images">
-        <img src="images/project1.jpg" alt="Traffic light project setup on breadboard" />
-        <img src="images/project2.jpg" alt="Traffic light simulation with green LED active" />
-        <img src="images/project3.jpg" alt="Traffic light simulation with yellow LED active" />
-        <img src="images/project4.jpg" alt="Full hardware setup for traffic light simulation project" />
+        <img src="images/pedestrian1.jpg" alt="Pedestrian walk signal project setup" />
+        <img src="images/pedestrian2.jpg" alt="Traffic light simulation with green signal active" />
+        <img src="images/pedestrian3.jpg" alt="Traffic light simulation with yellow signal active" />
       </div>
 
       <h4>Project Demo Video</h4>
       <video controls>
-        <source src="videos/traffic-demo.mp4" type="video/mp4" />
+        <source src="videos/pedestrian-demo.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>
 
     <div class="project">
-      <h3>Network Connectivity and Testing Lab</h3>
-      <p><strong>Tools:</strong> Command Prompt, TCP/IP, Ping, Tracert</p>
+      <h3>Intruder Alarm Sensor Project</h3>
+      <p><strong>Tools:</strong> Arduino IDE, ESP32, PIR Motion Sensor, Buzzer, LEDs, C++</p>
       <p>
-        Performed network diagnostics using ping and traceroute to test connectivity across multiple systems.
-        Identified and troubleshot network issues including latency and packet loss.
-        Strengthened understanding of TCP/IP protocols and real-world network troubleshooting techniques.
+        Built a sensor-based alarm system designed to detect possible intruder movement and trigger an alarm response.
+        Integrated motion sensing hardware with an ESP32 microcontroller so the system could identify activity and activate
+        visual and audio alerts. Tested and adjusted the setup to improve detection accuracy and system responsiveness.
+      </p>
+
+      <h4>Project Images</h4>
+      <div class="project-images">
+        <img src="images/intruder1.jpg" alt="Intruder alarm sensor setup" />
+        <img src="images/intruder2.jpg" alt="Intruder alarm hardware components" />
+      </div>
+    </div>
+
+    <div class="project">
+      <h3>Network Connectivity and Troubleshooting Project</h3>
+      <p><strong>Tools:</strong> Command Prompt, TCP/IP, Ping, Tracert, Network Diagnostics</p>
+      <p>
+        Completed a networking project focused on testing connectivity, identifying communication issues,
+        and documenting troubleshooting steps. Used networking tools and commands to analyze system communication
+        and strengthen understanding of TCP/IP fundamentals.
       </p>
       <p>
-        <a class="button" href="network-lab.pdf" target="_blank">View Networking Project</a>
+        <a class="button" href="network-project.docx" target="_blank">View Networking Project</a>
       </p>
+    </div>
+
+    <div class="project">
+      <h3>Slack Officer Check-In Workflow</h3>
+      <p><strong>Tools:</strong> Slack Workflow Builder, Airtable, Data Structuring</p>
+      <p>
+        Designed and developed a workflow system to track officer check-ins using Slack automation.
+        Structured the workflow to capture operational details such as officer name, phone number,
+        vehicle information, and assigned zones. Focused on improving accountability, organization,
+        and real-time communication for operations teams.
+      </p>
+    </div>
+  </section>
+
+  <section id="accolades">
+    <h2>Accolades</h2>
+
+    <div class="accolade-card">
+      <h3>Bachelor of Science in Software Development</h3>
+      <p><strong>Focus:</strong> Software development, technical problem solving, system design, programming concepts</p>
+      <p>
+        Through this degree program, I developed knowledge in software development principles, coding logic,
+        structured problem solving, and technical project work. It strengthened my understanding of how to build,
+        test, and improve systems while preparing me for IT and technical roles.
+      </p>
+
+      <div class="accolade-images">
+        <img src="images/degree-bachelors.jpg" alt="Bachelor degree or degree completion image" />
+      </div>
+    </div>
+
+    <div class="accolade-card">
+      <h3>Associate of Applied Science in Information Technology and Networking</h3>
+      <p><strong>Focus:</strong> Networking, IT support, system troubleshooting, infrastructure fundamentals</p>
+      <p>
+        This program built my foundation in information technology and networking by helping me understand
+        system connectivity, troubleshooting, support concepts, and technical environments. It also supported
+        my growth in practical IT knowledge that applies directly to support and networking roles.
+      </p>
+
+      <div class="accolade-images">
+        <img src="images/degree-associates.jpg" alt="Associate degree or degree completion image" />
+      </div>
+    </div>
+
+    <div class="accolade-card">
+      <h3>CompTIA Security+</h3>
+      <p><strong>Knowledge Gained:</strong> Security fundamentals, risk management, threats and vulnerabilities, incident response, access control</p>
+      <p>
+        Earning Security+ strengthened my understanding of cybersecurity principles including threat awareness,
+        security operations, access control, and risk-based thinking. It supports my transition into IT and cybersecurity-focused roles.
+      </p>
+
+      <div class="accolade-images">
+        <img src="images/cert-securityplus.jpg" alt="CompTIA Security Plus certificate" />
+      </div>
+    </div>
+
+    <div class="accolade-card">
+      <h3>Programming Essentials</h3>
+      <p><strong>Knowledge Gained:</strong> Programming logic, foundational coding concepts, structure, syntax, and problem solving</p>
+      <p>
+        This certification helped strengthen my understanding of core programming concepts such as logic flow,
+        structured thinking, and the basics of writing and understanding code. It supported my confidence in technical development work.
+      </p>
+
+      <div class="accolade-images">
+        <img src="images/cert-programming.jpg" alt="Programming Essentials certificate" />
+      </div>
+    </div>
+
+    <div class="accolade-card">
+      <h3>Software Design and Solutions</h3>
+      <p><strong>Knowledge Gained:</strong> System planning, requirements thinking, design structure, and solution development</p>
+      <p>
+        This credential supported my understanding of how software and technical solutions are designed from a planning
+        and problem-solving perspective. It reinforced concepts such as system structure, project thinking, and solution design.
+      </p>
+
+      <div class="accolade-images">
+        <img src="images/cert-software-design.jpg" alt="Software Design and Solutions certificate" />
+      </div>
     </div>
   </section>
 
