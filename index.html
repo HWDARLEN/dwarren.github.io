@@ -22,7 +22,11 @@
       padding: 40px 20px;
     }
 
-    h2, h3 {
+    h1, h2, h3, h4 {
+      margin-top: 0;
+    }
+
+    h2, h3, h4 {
       color: #0f172a;
     }
 
@@ -95,7 +99,7 @@
       box-shadow: 0 2px 10px rgba(0,0,0,0.15);
       padding: 10px;
       z-index: 999;
-      min-width: 180px;
+      min-width: 200px;
     }
 
     .menu a {
@@ -114,6 +118,48 @@
 
     .show {
       display: block;
+    }
+
+    .project-images {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+
+    .project-images img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    video {
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .menu-button {
+        top: 10px;
+        left: 10px;
+      }
+
+      .menu {
+        top: 55px;
+        left: 10px;
+        min-width: 170px;
+      }
+
+      header {
+        padding: 50px 15px 30px;
+      }
+
+      section {
+        margin: 15px;
+        padding: 20px;
+      }
     }
   </style>
 </head>
@@ -138,7 +184,7 @@
     <h2>About Me</h2>
     <p>
       I am an IT and cybersecurity-focused professional with hands-on experience in security operations,
-      incident monitoring, access control systems, and technical support tools. I am Security+ certified
+      incident monitoring, access control systems, and technical support tools. I am CompTIA Security+ certified
       and currently building my career in IT, cybersecurity, and networking.
     </p>
   </section>
@@ -171,10 +217,24 @@
       <h3>Traffic Light Simulation Project</h3>
       <p><strong>Tools:</strong> Arduino IDE, ESP32, C++</p>
       <p>
-        Built and programmed a traffic light system using an ESP32 microcontroller.
-        Integrated LEDs, push buttons, buzzer, and LCD display to simulate real-world traffic behavior.
-        Applied programming logic, timing control, and hardware troubleshooting to ensure system accuracy.
+        Developed an embedded traffic control system using ESP32 and Arduino IDE.
+        Implemented state-based logic to simulate real-world traffic light sequencing.
+        Integrated LEDs for signal states and tested timing accuracy to ensure proper transitions.
       </p>
+
+      <h4>Project Images</h4>
+      <div class="project-images">
+        <img src="images/project1.jpg" alt="Traffic light project setup on breadboard" />
+        <img src="images/project2.jpg" alt="Traffic light simulation with green LED active" />
+        <img src="images/project3.jpg" alt="Traffic light simulation with yellow LED active" />
+        <img src="images/project4.jpg" alt="Full hardware setup for traffic light simulation project" />
+      </div>
+
+      <h4>Project Demo Video</h4>
+      <video controls>
+        <source src="videos/traffic-demo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </div>
 
     <div class="project">
@@ -184,6 +244,9 @@
         Performed network diagnostics using ping and traceroute to test connectivity across multiple systems.
         Identified and troubleshot network issues including latency and packet loss.
         Strengthened understanding of TCP/IP protocols and real-world network troubleshooting techniques.
+      </p>
+      <p>
+        <a class="button" href="network-lab.pdf" target="_blank">View Networking Project</a>
       </p>
     </div>
   </section>
@@ -227,4 +290,3 @@
   </script>
 </body>
 </html>
-  
