@@ -101,7 +101,7 @@
       box-shadow: 0 2px 10px rgba(0,0,0,0.15);
       padding: 10px;
       z-index: 999;
-      min-width: 210px;
+      min-width: 220px;
     }
 
     .menu a {
@@ -147,7 +147,7 @@
 
     .project-subtitle {
       font-weight: bold;
-      margin-top: 10px;
+      margin-top: 12px;
       color: #0f172a;
     }
 
@@ -204,12 +204,64 @@
 
   <section id="skills">
     <h2>Skills</h2>
+
+    <h3>Programming Languages</h3>
     <ul>
-      <li><strong>IT & Networking:</strong> Network Troubleshooting, TCP/IP, Connectivity Testing, System Monitoring, Network Diagnostics</li>
-      <li><strong>Cybersecurity:</strong> Security+ Knowledge, Incident Monitoring, Threat Awareness, Access Control Systems, Risk Awareness</li>
-      <li><strong>Tools & Technologies:</strong> Slack Workflow Builder, Airtable, SIM Ticketing System, Lenel, Optics, GitHub, Microsoft Office Suite, Excel</li>
-      <li><strong>Programming & Hardware:</strong> Arduino IDE, ESP32, Breadboarding, LEDs, Buzzers, Sensors, LCD Displays, Push Buttons</li>
-      <li><strong>Technical Skills:</strong> Technical Documentation, Incident Reporting, Data Tracking, Problem Solving, Communication</li>
+      <li>Python</li>
+      <li>Java</li>
+      <li>SQL</li>
+      <li>C#</li>
+      <li>Kotlin (Android Development)</li>
+      <li>C++</li>
+    </ul>
+
+    <h3>IT & Networking</h3>
+    <ul>
+      <li>Network Troubleshooting</li>
+      <li>TCP/IP Fundamentals</li>
+      <li>Connectivity Testing</li>
+      <li>Ping and Tracert Diagnostics</li>
+      <li>System Monitoring</li>
+      <li>Network Diagnostics</li>
+    </ul>
+
+    <h3>Cybersecurity</h3>
+    <ul>
+      <li>CompTIA Security+ Knowledge</li>
+      <li>Incident Monitoring</li>
+      <li>Threat Awareness</li>
+      <li>Access Control Systems</li>
+      <li>Risk Awareness</li>
+    </ul>
+
+    <h3>Tools & Technologies</h3>
+    <ul>
+      <li>Slack Workflow Builder</li>
+      <li>Airtable</li>
+      <li>SIM Ticketing System</li>
+      <li>Lenel</li>
+      <li>Optics</li>
+      <li>GitHub</li>
+      <li>Microsoft Office Suite</li>
+      <li>Excel</li>
+    </ul>
+
+    <h3>Development & Hardware</h3>
+    <ul>
+      <li>Arduino IDE</li>
+      <li>ESP32 Microcontroller</li>
+      <li>Breadboards</li>
+      <li>LED Integration</li>
+      <li>Buzzer Integration</li>
+      <li>Push Buttons</li>
+      <li>Sensor-Based Systems</li>
+      <li>LCD Displays</li>
+    </ul>
+
+    <h3>Environments Used</h3>
+    <ul>
+      <li>Azure Lab</li>
+      <li>Visual Studio Code</li>
     </ul>
   </section>
 
@@ -221,39 +273,37 @@
       <p><strong>Tools Used:</strong> ESP32, Breadboard, Jumper Wires, LEDs, Push Button, Buzzer, LCD Display, Arduino IDE</p>
 
       <p>
-        This project focused on designing an IoT-enabled traffic light controller that simulated a two-way traffic
-        system with pedestrian crossing functionality. I used LEDs to represent standard traffic behavior, including
-        green for go, yellow for slow down, and red for stop. Once the red light was active, the system signaled
-        that pedestrians could safely walk.
+        This project focused on designing an IoT-enabled, two-way traffic light controller with pedestrian crossing
+        functionality. The system simulated standard traffic light behavior by using green to represent go, yellow
+        to represent slow down, and red to represent stop. Once the red light became active, the pedestrian signal
+        activated to show that it was safe to walk.
       </p>
 
       <p>
-        The project required implementing timing logic to control how long each traffic state remained active and
-        ensuring the system returned to its default cycle after pedestrian activity. A push button was used to simulate
-        the pedestrian crossing trigger, while the overall design reflected how real intersections coordinate vehicle
-        and pedestrian movement safely.
+        A push button was used to simulate pedestrian crossing requests, and programmed timing logic controlled how
+        long each light phase remained active before transitioning to the next state. The project required building a
+        structured traffic sequence and ensuring the system returned to its normal default state after pedestrian use.
       </p>
 
       <p>
-        This project strengthened my understanding of IoT concepts by combining hardware components with software logic.
-        It also helped build experience in Arduino programming, simulation-based design, debugging, and testing a smart
-        traffic control system.
+        The first image shows the tools and components used in the build. The other images show the traffic light
+        states and setup, while the video demonstrates the pedestrian walk signal activating once the light turns red.
       </p>
 
-      <p class="project-subtitle">What I learned:</p>
+      <p class="project-subtitle">Learning Objectives and Skills Gained:</p>
       <ul>
-        <li>How to connect physical components with smart system logic</li>
-        <li>How to program timing sequences for multiple traffic states</li>
-        <li>How to integrate pedestrian crossing behavior into a controller design</li>
-        <li>How to test and troubleshoot embedded system logic</li>
+        <li>Understanding how IoT systems connect physical components with smart control logic</li>
+        <li>Programming timing sequences for traffic signal control</li>
+        <li>Using push buttons and signal outputs to simulate pedestrian crossing requests</li>
+        <li>Testing, debugging, and validating hardware behavior in an embedded system</li>
       </ul>
 
       <h4>Project Images</h4>
       <div class="project-images">
-        <img src="images/pedestrian1.jpeg" alt="Pedestrian and traffic light simulation image 1" />
-        <img src="images/pedestrian2.jpeg" alt="Pedestrian and traffic light simulation image 2" />
-        <img src="images/pedestrian3.jpeg" alt="Pedestrian and traffic light simulation image 3" />
-        <img src="images/pedestrian4.jpeg" alt="Pedestrian and traffic light simulation image 4" />
+        <img src="images/pedestrian1.jpeg" alt="Traffic project tools and hardware components" />
+        <img src="images/pedestrian2.jpeg" alt="Green light active to simulate go" />
+        <img src="images/pedestrian3.jpeg" alt="Yellow light active to simulate slow down" />
+        <img src="images/pedestrian4.jpeg" alt="Red light active and pedestrian crossing state" />
       </div>
 
       <h4>Project Demo Video</h4>
@@ -268,39 +318,44 @@
       <p><strong>Tools Used:</strong> ESP32 or Arduino, Breadboard, Jumper Wires, LEDs, Buzzer, Ultrasonic Sensor, Photocell (LDR), IR Sensor, DHT11, Arduino IDE, Excel</p>
 
       <p>
-        This project involved building a smart home automation and security prototype that used multiple sensors to
-        monitor environmental and security-related conditions. The system was designed to simulate how connected home
-        technology can automate responses and improve safety inside a home environment.
+        This project involved building an IoT smart home automation and security system designed to monitor both
+        environmental and security-related conditions. The system used multiple sensors to simulate how smart home
+        devices can respond to darkness, door activity, temperature, humidity, and possible intruder movement.
       </p>
 
       <p>
-        Different sensors supported different system actions. An ultrasonic sensor was used to monitor proximity for
-        possible intruder activity. A photocell helped trigger lighting behavior based on darkness levels. An IR sensor
-        acted like a door status sensor, while the DHT11 measured temperature and humidity for environmental monitoring.
+        The ultrasonic sensor supported intruder monitoring by measuring proximity. The photocell automatically
+        responded when the environment became dark. The IR sensor was used like a door sensor to detect open or
+        closed conditions, and the DHT11 helped monitor indoor temperature and humidity levels.
       </p>
 
       <p>
-        LEDs were used to show different system states, such as normal, caution, and danger. A buzzer supported alarm
-        behavior when the system detected an abnormal or unsafe condition. This project required integrating multiple
-        inputs, organizing logic for different system responses, and understanding how smart systems collect and act
-        on sensor data.
+        The LED colors were used to communicate system status. Green represented a normal or safe condition. Yellow
+        represented caution or warning, meaning a condition needed attention but was not yet critical. Red represented
+        danger or alarm, showing that the system detected an abnormal or unsafe state. A buzzer supported this logic
+        by sounding an audible alert when an alarm or critical condition occurred.
       </p>
 
-      <p class="project-subtitle">What I learned:</p>
+      <p>
+        The fifth image shows the system indicating a possible intruder. This represents the triggered alert state
+        and demonstrates how the system responds visually and functionally when a possible threat is detected.
+      </p>
+
+      <p class="project-subtitle">Learning Objectives and Skills Gained:</p>
       <ul>
-        <li>How sensor-based automation works in IoT environments</li>
-        <li>How to connect multiple sensors to a microcontroller</li>
-        <li>How to use LEDs and alarms to communicate system status</li>
-        <li>How to collect, interpret, and respond to hardware data</li>
+        <li>Understanding how IoT devices collect and respond to real-time sensor input</li>
+        <li>Connecting multiple sensors to one smart home monitoring system</li>
+        <li>Using LEDs and alarms to communicate safe, caution, and danger states</li>
+        <li>Interpreting hardware data and designing automated responses</li>
       </ul>
 
       <h4>Project Images</h4>
       <div class="project-images">
-        <img src="images/intruder1.jpeg" alt="Intruder or smart home project image 1" />
-        <img src="images/intruder2.jpeg" alt="Intruder or smart home project image 2" />
-        <img src="images/intruder3.jpeg" alt="Intruder or smart home project image 3" />
-        <img src="images/intruder4.jpeg" alt="Intruder or smart home project image 4" />
-        <img src="images/intruder5.jpeg" alt="Intruder or smart home project image 5" />
+        <img src="images/intruder1.jpeg" alt="IoT home security project image 1" />
+        <img src="images/intruder2.jpeg" alt="IoT home security project image 2" />
+        <img src="images/intruder3.jpeg" alt="IoT home security project image 3" />
+        <img src="images/intruder4.jpeg" alt="IoT home security project image 4" />
+        <img src="images/intruder5.jpeg" alt="Possible intruder alert shown in IoT home security project" />
       </div>
     </div>
 
@@ -315,8 +370,8 @@
       </p>
 
       <p>
-        The project helped strengthen my understanding of TCP/IP fundamentals, connectivity testing, and practical
-        troubleshooting methods. It also required documenting results clearly and organizing findings into a formal report.
+        The project strengthened my understanding of TCP/IP fundamentals, connectivity testing, and practical
+        troubleshooting methods. It also required documenting findings clearly and organizing results into a formal report.
       </p>
 
       <a class="button" href="docs/network-project.pdf" target="_blank">View Networking Project</a>
@@ -327,30 +382,19 @@
       <p><strong>Tools Used:</strong> Slack Workflow Builder, Airtable, Data Structuring, Workflow Logic</p>
 
       <p>
-        Designed a workflow system to track officer check-ins using Slack automation. The workflow was structured to
-        capture operational details such as officer name, phone number, vehicle information, and assigned zones.
+        Designed a workflow system to track officer check-ins using Slack automation. The workflow was structured
+        to capture operational details such as officer name, phone number, vehicle information, and assigned zones.
       </p>
 
       <p>
-        This project focused on process improvement, accountability, and real-time communication support for operations
-        teams. It also demonstrated how automation can improve visibility and reduce manual tracking tasks.
+        This project focused on process improvement, accountability, and real-time communication support for
+        operations teams. It demonstrated how workflow automation can improve visibility and reduce manual tracking.
       </p>
     </div>
   </section>
 
   <section id="accolades">
     <h2>Accolades</h2>
-
-    <div class="accolade-card">
-      <h3>Associate of Applied Science in Information Technology and Networking</h3>
-      <p>
-        Built foundational knowledge in networking, technical support, connectivity, troubleshooting,
-        and system operations that apply directly to IT environments.
-      </p>
-      <div class="accolade-images">
-        <img src="images/associates.jpeg" alt="Associate degree image" />
-      </div>
-    </div>
 
     <div class="accolade-card">
       <h3>CompTIA Security+</h3>
@@ -360,6 +404,17 @@
       </p>
       <div class="accolade-images">
         <img src="images/securityplus.jpeg" alt="CompTIA Security Plus certificate image" />
+      </div>
+    </div>
+
+    <div class="accolade-card">
+      <h3>Associate of Applied Science in Information Technology and Networking</h3>
+      <p>
+        Built foundational knowledge in networking, technical support, connectivity, troubleshooting,
+        and system operations that apply directly to IT environments.
+      </p>
+      <div class="accolade-images">
+        <img src="images/associates.jpeg" alt="Associate degree image" />
       </div>
     </div>
 
@@ -395,7 +450,6 @@
   <section id="contact">
     <h2>Contact</h2>
     <p>Email: your email here</p>
-    <p>LinkedIn: your LinkedIn link here</p>
     <p>GitHub: https://github.com/DWPort</p>
   </section>
 
@@ -425,4 +479,3 @@
   </script>
 </body>
 </html>
-
